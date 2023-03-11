@@ -15,57 +15,77 @@
             <title>Madeleine Gustavsson's Portfolio - Webdeveloper</title>
       </head>
       <body>
-            <header class="contentWrap header">
-                  <h1>Madeleine Gustavsson - Web developer</h1>
-                  <a href="https://madeleineportfolio.com"
-                        ><img src="assets/logo.png" alt="Logo of the name Madeleine" class="headerLogo"
-                  /></a>
-                  <nav>
-                        <ul>
-                              <li>
-                                    <a href="portfolio.html"
-                                          >Portfolio<span class="accentColor">.</span></a
-                                    >
-                              </li>
-                              <li>
-                                    <a href="#aboutMe"
-                                          >About me<span class="accentColor">.</span></a
-                                    >
-                              </li>
-                              <li>
-                                    <a href="#contactMe"
-                                          >Contact me<span class="accentColor">.</span></a
-                                    >
-                              </li>
-                              <li>
-                                    <a href="#experience"
-                                          >Experience<span class="accentColor">.</span></a
-                                    >
-                              </li>
-                        </ul>
-                  </nav>
-
-                  <div>
-                        <a href="mailto:madeleiine96@gmail.com" class="accentColor"
+            <header class="contentWrap">
+                  <div class="header">
+                        <h1>Madeleine Gustavsson - Web developer</h1>
+                        <a href="https://madeleineportfolio.com"
                               ><img
-                                    src="assets/email.png"
-                                    alt="Icon for e-mail"
-                                    class="header-email"
-                              />
-                              madeleiine96@gmail.com</a
-                        >
+                                    src="assets/logo.png"
+                                    alt="Logo of the name Madeleine"
+                                    class="headerLogo"
+                        /></a>
 
-                        <a
-                              href="https://www.instagram.com/madeleiine96/"
-                              title="Find me on Instagram"
-                              ><img src="assets/instagram.png" alt="Logotype for Instagram"
-                        /></a>
-                        <a
-                              href="https://www.linkedin.com/in/madeleineportfolio/"
-                              title="Find me on LinkedIn"
-                              ><img src="assets/linkedin.png" alt="Logotype for LinkedIn"
-                        /></a>
+                        <nav id="mainNav">
+                              <ul>
+                                    <li>
+                                          <a href="portfolio.html" class="navText"
+                                                >Portfolio<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                                    <li>
+                                          <a href="#aboutMe" class="navText"
+                                                >About me<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                                    <li>
+                                          <a href="#contactMe" class="navText"
+                                                >Contact me<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                                    <li>
+                                          <a href="#experience" class="navText"
+                                                >Experience<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                              </ul>
+                        </nav>
+
+                        <div class="contactNav" id="contactNav">
+                              <a href="mailto:madeleiine96@gmail.com" class="accentColor"
+                                    ><img
+                                          src="assets/email.png"
+                                          alt="Icon for e-mail"
+                                          class="header-email"
+                                    />
+                                    <span>madeleiine96@gmail.com</span></a
+                              >
+
+                              <a
+                                    href="https://www.instagram.com/madeleiine96/"
+                                    title="Find me on Instagram"
+                                    ><img src="assets/instagram.png" alt="Logotype for Instagram" class="header-instagram"
+                              /></a>
+                              <a
+                                    href="https://www.linkedin.com/in/madeleineportfolio/"
+                                    title="Find me on LinkedIn"
+                                    ><img src="assets/linkedin.png" alt="Logotype for LinkedIn" class="header-linkedin"
+                              /></a>
+                        </div>
                   </div>
+                  <a
+                        href="javascript:void(0);"
+                        class="icon menu-close"
+                        id="mobileMenuClose"
+                        onclick="mySecondFunction()"
+                        ><img src="assets/menu-close.png" alt=""
+                  /></a>
+                  <a
+                        href="javascript:void(0);"
+                        class="icon menu-open"
+                        id="mobileMenuOpen"
+                        onclick="myFunction()"
+                        ><img src="assets/menu-open.png" alt=""
+                  /></a>
             </header>
 
             <main>
@@ -135,8 +155,12 @@
 
                         <section>
                               <h2>
-                                    Hello, my name is <br /><strong>Madeleine Gustavsson</strong
-                                    ><span class="accentColor big">.</span>
+                                    Hello, my name is
+                                    <strong
+                                          >Madeleine Gustavsson<span class="accentColor"
+                                                >.</span
+                                          ></strong
+                                    >
                               </h2>
                               <p>
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -552,14 +576,14 @@
 
                         <div>
                               <a href="mailto:madeleiine96@gmail.com" title="E-mail me"
-                                    ><img
-                                          src="assets/email.png"
-                                          alt="Icon for e-mail"
-                                    />madeleiine96@gmail.com</a
+                                    ><img src="assets/email.png" alt="Icon for e-mail" /><span
+                                          >madeleiine96@gmail.com</span
+                                    ></a
                               >
                               <a href="tel:+46705572265" title="Call me"
-                                    ><img src="assets/phone.png" alt="Icon for telephone" />+ 46 (0)
-                                    705 572 265</a
+                                    ><img src="assets/phone.png" alt="Icon for telephone" /><span
+                                          >+ 46 (0) 705 572 265</span
+                                    ></a
                               >
                               <a
                                     href="https://www.instagram.com/madeleiine96/"
@@ -567,15 +591,14 @@
                                     ><img
                                           src="assets/instagram.png"
                                           alt="Logo for Instagram"
-                                    />madeleiine96</a
+                                    /><span>madeleiine96</span></a
                               >
                               <a
                                     href="https://www.linkedin.com/in/madeleineportfolio/"
                                     title="Find me on LinkedIn"
-                                    ><img
-                                          src="assets/linkedin.png"
-                                          alt="Logo for LinkedIn"
-                                    />Madeleine Gustavsson</a
+                                    ><img src="assets/linkedin.png" alt="Logo for LinkedIn" /><span
+                                          >Madeleine Gustavsson</span
+                                    ></a
                               >
                         </div>
                   </section>
@@ -587,9 +610,11 @@
                   /></a>
 
                   <p>
-                        &copy; 2023
+                        <span>&copy; 2023</span>
                         <a href="https://madeleineportfolio.com">madeleineportfolio.com</a>
                   </p>
             </footer>
+
+            <script src="js/main.js"></script>
       </body>
 </html>
