@@ -4,27 +4,34 @@
             <meta charset="UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="author" content="Madeleine Gustavsson" />
             <meta
                   name="description"
                   content="Madeleine is an aspiring webdeveloper who loves develop websites"
             />
             <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
 
+            <link rel="canonical" href="https://madeleineportfolio.com" />
+
+            <!--  StyleSheets   -->
             <link rel="stylesheet" href="css/reset.css" />
             <link rel="stylesheet" href="css/main.css" />
-            <title>Madeleine Gustavsson's Portfolio - Webdeveloper</title>
+
+            <title>About web developer Madeleine</title>
       </head>
       <body>
+            <!--        HEADER START      -->
             <header>
                   <div class="header">
                         <h1>Madeleine Gustavsson - Web developer</h1>
                         <a href="https://madeleineportfolio.com"
                               ><img
                                     src="assets/logo.png"
-                                    alt="Logo of the name Madeleine"
+                                    alt="Logo with text 'Madeleine.'"
                                     class="headerLogo"
                         /></a>
 
+                        <!--  NAVIGATION  -->
                         <nav id="mainNav" class="mainNav">
                               <ul class="navList">
                                     <li>
@@ -32,6 +39,7 @@
                                                 href="portfolio.html"
                                                 class="navText"
                                                 onclick="closeMenuLink();"
+                                                title="See Madeleine's projects"
                                                 >Portfolio<span class="accentColor">.</span></a
                                           >
                                     </li>
@@ -40,6 +48,7 @@
                                                 href="#aboutMeLink"
                                                 class="navText paddingLeft2vw"
                                                 onclick="closeMenuLink();"
+                                                title="Read more about Madeleine"
                                                 >About me<span class="accentColor">.</span></a
                                           >
                                     </li>
@@ -48,6 +57,7 @@
                                                 href="#contactMeLink"
                                                 class="navText paddingLeft2vw"
                                                 onclick="closeMenuLink();"
+                                                title="Contact me. "
                                                 >Contact me<span class="accentColor">.</span></a
                                           >
                                     </li>
@@ -56,19 +66,21 @@
                                                 href="#experienceLink"
                                                 class="navText paddingLeft2vw"
                                                 onclick="closeMenuLink();"
+                                                title="Read about Madeleine's experience"
                                                 >Experience<span class="accentColor">.</span></a
                                           >
                                     </li>
                               </ul>
                         </nav>
 
+                        <!--  CONTACT SECTION IN HEADER     -->
                         <div class="contactNav" id="contactNav">
                               <a
                                     href="mailto:madeleiine96@gmail.com"
                                     class="accentColor contactNavLink headerEmailLink"
                                     ><img
                                           src="assets/email.png"
-                                          alt="Icon for e-mail"
+                                          alt="Icon for e-mail - envelope"
                                           class="header-email headerSocialImg"
                                     />
                               </a>
@@ -79,7 +91,7 @@
                                     class="contactNavLink"
                                     ><img
                                           src="assets/instagram.png"
-                                          alt="Logotype for Instagram"
+                                          alt="Logotype for Instagram - retro camera"
                                           class="header-instagram headerSocialImg"
                               /></a>
                               <a
@@ -88,35 +100,39 @@
                                     class="contactNavLink"
                                     ><img
                                           src="assets/linkedin.png"
-                                          alt="Logotype for LinkedIn"
+                                          alt="Logotype for LinkedIn - text 'in'."
                                           class="header-linkedin headerSocialImg"
                               /></a>
                         </div>
                   </div>
-                  <a
-                        href="javascript:void(0);"
-                        class="icon menu-close"
+                  <span
+                        class="icon menu-close pointer"
+                        title="Mobile menu"
                         id="mobileMenuClose"
                         onclick="closeMobileMenu()"
-                        ><img src="assets/menu-close.png" alt=""
-                  /></a>
-                  <a
-                        href="javascript:void(0);"
-                        class="icon menu-open"
+                        ><img src="assets/menu-close.png" alt="Hamburgermenu icon"
+                  /></span>
+                  <span
+                        class="icon menu-open pointer"
+                        title="Mobile menu"
                         id="mobileMenuOpen"
                         onclick="openMobileMenu()"
-                        ><img src="assets/menu-open.png" alt=""
-                  /></a>
+                        ><img src="assets/menu-open.png" alt="Hamburgermenu icon"
+                  /></span>
             </header>
+            <!--        HEADER END      -->
 
+            <!--        MAIN START      -->
             <main>
+                  <!--        Hero Section      -->
                   <div class="contentWrap heroSection">
                         <img
                               src="assets/profile.png"
-                              alt="Picture of Madeleine Gustavsson"
+                              alt="Picture of Madeleine Gustavsson outside in front of a green background."
                               class="hero-img"
                         />
 
+                        <!--        Introduction      -->
                         <section class="heroContent">
                               <h2 class="heroContentHeading">
                                     Hello, my name is
@@ -145,9 +161,12 @@
                         </section>
                   </div>
 
+                  <!--        Divider      -->
                   <div class="dividerBlack" id="aboutMeLink"></div>
 
+                  <!--        About Section      -->
                   <div id="aboutMe" class="contentWrap aboutMe">
+                        <!--        info - section      -->
                         <div class="infoWrapper">
                               <div class="infoContent">
                                     <img
@@ -183,6 +202,7 @@
                               </div>
                         </div>
 
+                        <!--        text-section      -->
                         <section class="aboutMeContent">
                               <h3 class="aboutMeHeading">Who am I & what do I do?</h3>
                               <p class="aboutMeText">
@@ -210,10 +230,15 @@
                               </p>
                         </section>
                   </div>
+
+                  <!--        Divider      -->
                   <div class="dividerRed" id="experienceLink"></div>
+
+                  <!--        Work/Education Section      -->
                   <section class="contentWrap experience" id="experience">
                         <h3 class="experienceHeading">My work & academic experience!</h3>
                         <div class="worklist">
+                              <!--        Experience 1      -->
                               <div class="experienceList">
                                     <div class="experienceListHeaders">
                                           <h4 class="experienceListHeading">
@@ -234,6 +259,7 @@
                                     </p>
                               </div>
 
+                              <!--        Experience 2      -->
                               <div class="experienceList">
                                     <div class="experienceListHeaders">
                                           <h4 class="experienceListHeading">
@@ -253,6 +279,7 @@
                                     </p>
                               </div>
 
+                              <!--        Experience 3      -->
                               <div class="experienceList">
                                     <div class="experienceListHeaders">
                                           <h4 class="experienceListHeading">
@@ -274,6 +301,7 @@
                                     </p>
                               </div>
 
+                              <!--        Experience 4      -->
                               <div class="experienceList">
                                     <div class="experienceListHeaders">
                                           <h4 class="experienceListHeading">
@@ -295,7 +323,11 @@
                               </div>
                         </div>
                   </section>
+
+                  <!--        Divider      -->
                   <div class="dividerBlack" id="contactMeLink"></div>
+
+                  <!--        Contact Section      -->
                   <section id="contactMe" class="contentWrap contactMe">
                         <h3>Contact me<span class="accentColor">.</span></h3>
                         <p class="contactIntro">
@@ -306,7 +338,7 @@
                         <div class="contactContent">
                               <a
                                     href="mailto:madeleiine96@gmail.com"
-                                    title="E-mail me"
+                                    title="E-mail me."
                                     class="contactLink"
                                     ><img
                                           src="assets/email.png"
@@ -314,7 +346,7 @@
                                           class="contactImg"
                                     /><span class="contactLinkText">madeleiine96@gmail.com</span></a
                               >
-                              <a href="tel:+46705572265" title="Call me" class="contactLink"
+                              <a href="tel:+46705572265" title="Call me." class="contactLink"
                                     ><img
                                           src="assets/phone.png"
                                           alt="Icon for telephone, a telephone"
@@ -323,7 +355,7 @@
                               >
                               <a
                                     href="https://github.com/madeleiine96"
-                                    title="Find me on GitHub"
+                                    title="Find me on GitHub."
                                     class="contactLink"
                                     ><img
                                           src="assets/github.png"
@@ -333,7 +365,7 @@
                               >
                               <a
                                     href="https://www.linkedin.com/in/madeleineportfolio/"
-                                    title="Find me on LinkedIn"
+                                    title="Find me on LinkedIn."
                                     class="contactLink"
                                     ><img
                                           src="assets/linkedin.png"
@@ -344,9 +376,11 @@
                         </div>
                   </section>
             </main>
+            <!--        MAIN END      -->
 
+            <!--        FOOTER START      -->
             <footer class="footer">
-                  <a href="https://madeleineportfolio.com"
+                  <a href="https://madeleineportfolio.com" title="Homepage"
                         ><img
                               src="assets/logoTransparent.png"
                               alt="Logo of the name Madeleine"
@@ -356,16 +390,24 @@
                   <p class="footerText">
                         <span
                               >&copy; 2023
-                              <a href="https://madeleineportfolio.com" class="footerLink"
+                              <a
+                                    href="https://madeleineportfolio.com"
+                                    class="footerLink"
+                                    title="Homepage"
                                     >madeleineportfolio.com</a
                               ></span
                         >
-                        <a href="https://danielhellstrom.me/" class="footerLink designedLink"
+                        <a
+                              href="https://danielhellstrom.me/"
+                              class="footerLink designedLink"
+                              title="To Daniel's portfolio"
                               >Designed by Daniel.</a
                         >
                   </p>
             </footer>
+            <!--        FOOTER END          -->
 
+            <!--        SCRIPT          -->
             <script src="js/main.js"></script>
       </body>
 </html>

@@ -2,8 +2,11 @@ $accent: #c70039;
 $black: #242424;
 $white: #f8f8ff;
 $primary-font: "Inter";
+
+// import of font
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* -------------------------    GENERAL    ------------------------- */
 body {
       font-family: $primary-font, sans-serif;
       background-color: $white;
@@ -40,6 +43,10 @@ h3 {
 
 .accentColor {
       color: $accent;
+}
+
+.pointer {
+      cursor: pointer;
 }
 
 /* -------------------------    HEADER    ------------------------- */

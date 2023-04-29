@@ -4,12 +4,16 @@
             <meta charset="UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="author" content="Madeleine Gustavsson" />
             <meta
                   name="description"
-                  content="See Madeleine's latest creations and projects below"
+                  content="See a selection of Madeleine's creations and projects below"
             />
             <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
 
+            <link rel="canonical" href="https://madeleineportfolio.com/portfolio.html" />
+
+            <!--  StyleSheets   -->
             <link rel="stylesheet" href="css/reset.css" />
             <link
                   href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -18,19 +22,22 @@
                   crossorigin="anonymous"
             />
             <link rel="stylesheet" href="css/main.css" />
-            <title>Madeleine Gustavsson's Portfolio - Webdeveloper</title>
+
+            <title>Madeleine's projects in webdevelopment</title>
       </head>
       <body>
+            <!--        HEADER START      -->
             <header>
                   <div class="header">
                         <h1>Madeleine Gustavsson - Web developer</h1>
                         <a href="https://madeleineportfolio.com"
                               ><img
                                     src="assets/logo.png"
-                                    alt="Logo of the name Madeleine"
+                                    alt="Logo with the name Madeleine."
                                     class="headerLogo"
                         /></a>
 
+                        <!--  NAVIGATION  -->
                         <nav id="mainNav" class="mainNav">
                               <ul class="navList">
                                     <li>
@@ -38,6 +45,7 @@
                                                 href="portfolio.html"
                                                 class="navText"
                                                 onclick="closeMenuLink();"
+                                                title="See Madeleine's projects"
                                                 >Portfolio<span class="accentColor">.</span></a
                                           >
                                     </li>
@@ -46,6 +54,7 @@
                                                 href="index.html#aboutMeLink"
                                                 class="navText paddingLeft2vw"
                                                 onclick="closeMenuLink();"
+                                                title="Read more about Madeleine"
                                                 >About me<span class="accentColor">.</span></a
                                           >
                                     </li>
@@ -54,6 +63,7 @@
                                                 href="index.html#contactMeLink"
                                                 class="navText paddingLeft2vw"
                                                 onclick="closeMenuLink();"
+                                                title="Contact me. "
                                                 >Contact me<span class="accentColor">.</span></a
                                           >
                                     </li>
@@ -62,19 +72,21 @@
                                                 href="index.html#experienceLink"
                                                 class="navText paddingLeft2vw"
                                                 onclick="closeMenuLink();"
+                                                title="Read about Madeleine's experience"
                                                 >Experience<span class="accentColor">.</span></a
                                           >
                                     </li>
                               </ul>
                         </nav>
 
+                        <!--  CONTACT SECTION IN HEADER     -->
                         <div class="contactNav" id="contactNav">
                               <a
                                     href="mailto:madeleiine96@gmail.com"
                                     class="accentColor contactNavLink headerEmailLink"
                                     ><img
                                           src="assets/email.png"
-                                          alt="Icon for e-mail"
+                                          alt="Icon for e-mail - envelope"
                                           class="header-email headerSocialImg"
                                     />
                               </a>
@@ -85,7 +97,7 @@
                                     class="contactNavLink"
                                     ><img
                                           src="assets/instagram.png"
-                                          alt="Logotype for Instagram"
+                                          alt="Logotype for Instagram - retro camera"
                                           class="header-instagram headerSocialImg"
                               /></a>
                               <a
@@ -94,33 +106,37 @@
                                     class="contactNavLink"
                                     ><img
                                           src="assets/linkedin.png"
-                                          alt="Logotype for LinkedIn"
+                                          alt="Logotype for LinkedIn - text 'in'."
                                           class="header-linkedin headerSocialImg"
                               /></a>
                         </div>
                   </div>
-                  <a
-                        href="javascript:void(0);"
-                        class="icon menu-close"
+                  <span
+                        class="icon menu-close pointer"
                         id="mobileMenuClose"
                         onclick="closeMobileMenu()"
-                        ><img src="assets/menu-close.png" alt=""
-                  /></a>
-                  <a
-                        href="javascript:void(0);"
-                        class="icon menu-open"
+                        ><img src="assets/menu-close.png" alt="Hamburgermenu icon"
+                  /></span>
+                  <span
+                        class="icon menu-open pointer"
                         id="mobileMenuOpen"
                         onclick="openMobileMenu()"
-                        ><img src="assets/menu-open.png" alt=""
-                  /></a>
+                        ><img src="assets/menu-open.png" alt="Hamburgermenu icon"
+                  /></span>
             </header>
+            <!--        HEADER END      -->
 
+            <!--        MAIN START      -->
             <main class="portfolioPage contentWrap">
+                  <!--        Projects intro         -->
                   <section class="headingWrapper">
                         <h2 class="portfolioHeading">My Work<span class="accentColor">.</span></h2>
                         <p class="portfolioIntro">My latest and proudest contributions.</p>
                   </section>
+
+                  <!--        PROJECTS         -->
                   <article>
+                        <!--        Project 1         -->
                         <div class="project">
                               <section class="projectContent order-2">
                                     <h3 class="projectHeading">
@@ -148,6 +164,7 @@
                               />
                         </div>
 
+                        <!--        Project 2         -->
                         <div class="project">
                               <section class="projectContent order-1">
                                     <h3 class="projectHeading">
@@ -171,11 +188,13 @@
                               </section>
                               <img
                                     src="assets/froderydsBygg.png"
-                                    alt="Websitescreenshot."
+                                    alt="Websitescreenshot of froderyds.se."
                                     class="projectImg order-2 froderydsImg"
+                                    loading="lazy"
                               />
                         </div>
 
+                        <!--        Project 3         -->
                         <div class="project">
                               <section class="projectContent order-2">
                                     <h3 class="projectHeading">
@@ -197,8 +216,10 @@
                                           >To the API</a
                                     >
                               </section>
+
+                              <!--        Carousel of three images         -->
                               <div
-                                    id="myCarousel"
+                                    id="CatAppCarousel"
                                     class="carousel slide carousel-fade projectImg order-1"
                                     data-bs-interval="false"
                               >
@@ -208,6 +229,7 @@
                                                       src="assets/mobileApp1.png"
                                                       class="d-block w-100"
                                                       alt="Screenshot from application. List with cat names."
+                                                      loading="lazy"
                                                 />
                                           </div>
                                           <div class="carousel-item">
@@ -215,6 +237,7 @@
                                                       src="assets/mobileApp2.png"
                                                       class="d-block w-100"
                                                       alt="Screenshot from application. Form to add a new cat."
+                                                      loading="lazy"
                                                 />
                                           </div>
                                           <div class="carousel-item">
@@ -222,13 +245,14 @@
                                                       src="assets/mobileApp3.png"
                                                       class="d-block w-100"
                                                       alt="Screenshot from application. Information about a cat called Kattson. "
+                                                      loading="lazy"
                                                 />
                                           </div>
                                     </div>
                                     <button
                                           class="carousel-control-prev"
                                           type="button"
-                                          data-bs-target="#myCarousel"
+                                          data-bs-target="#CatAppCarousel"
                                           data-bs-slide="prev"
                                     >
                                           <span
@@ -240,7 +264,7 @@
                                     <button
                                           class="carousel-control-next"
                                           type="button"
-                                          data-bs-target="#myCarousel"
+                                          data-bs-target="#CatAppCarousel"
                                           data-bs-slide="next"
                                     >
                                           <span
@@ -252,7 +276,9 @@
                               </div>
                         </div>
                   </article>
+                  <!--        End projects         -->
 
+                  <!--        ColorLine        -->
                   <div class="colorLine">
                         <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -305,35 +331,47 @@
                         </svg>
                   </div>
 
+                  <!--        End of project-main         -->
                   <section class="continuedContent">
                         <h4 class="continuedHeading">
                               To be continued<span class="accentColor">.</span>
                         </h4>
-                        <p class="continuedText">More projects coming soon...</p>
+                        <p class="continuedText">More projects are coming soon...</p>
                   </section>
             </main>
+            <!--        MAIN END      -->
 
+            <!--        FOOTER START      -->
             <footer class="footer">
-                  <a href="https://madeleineportfolio.com"
+                  <a href="https://madeleineportfolio.com" title="Homepage"
                         ><img
                               src="assets/logoTransparent.png"
                               alt="Logo of the name Madeleine"
                               class="footerImg"
+                              loading="lazy"
                   /></a>
 
                   <p class="footerText">
                         <span
                               >&copy; 2023
-                              <a href="https://madeleineportfolio.com" class="footerLink"
+                              <a
+                                    href="https://madeleineportfolio.com"
+                                    class="footerLink"
+                                    title="Homepage"
                                     >madeleineportfolio.com</a
                               ></span
                         >
-                        <a href="https://danielhellstrom.me/" class="footerLink designedLink"
+                        <a
+                              href="https://danielhellstrom.me/"
+                              class="footerLink designedLink"
+                              title="To Daniel's portfolio"
                               >Designed by Daniel.</a
                         >
                   </p>
             </footer>
+            <!--        FOOTER END          -->
 
+            <!--        SCRIPTS          -->
             <script
                   src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
                   integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
