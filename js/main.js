@@ -12,7 +12,9 @@ var imgNavInstagram = contactNav.getElementsByTagName("img")[1];
 var imgNavLinkedin = contactNav.getElementsByTagName("img")[2];
 var classHeader = document.getElementsByClassName("header")[0];
 
-function myFunction() {
+var haveBeenOpened = false;
+
+function openMobileMenu() {
       mainNav.style.display = "flex";
       contactNav.style.display = "flex";
       header.style.backgroundColor = "#242424";
@@ -29,9 +31,10 @@ function myFunction() {
             navText[i].style.color = "#f8f8ff";
             navText[i].style.paddingLeft = 0;
       }
+      haveBeenOpened = true;
 }
 
-function mySecondFunction() {
+function closeMobileMenu() {
       mainNav.style.display = "none";
       contactNav.style.display = "none";
       openMenu.style.display = "block";
@@ -47,5 +50,12 @@ function mySecondFunction() {
       for (let i = 0; i < navText.length; i++) {
             navText[i].style.color = "#242424";
             navText[i].style.paddingLeft = "2vw";
+      }
+      haveBeenOpened = false;
+}
+
+function closeMenuLink() {
+      if (haveBeenOpened == true) {
+            closeMobileMenu();
       }
 }

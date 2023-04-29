@@ -40,78 +40,86 @@ h3 {
 }
 
 /* -------------------------    HEADER    ------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  background-color: #f8f8ff;
+}
+
 .header {
-  padding: 80px 0;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  max-width: 1720px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
 }
-.header .headerLogo {
+
+.headerLogo {
   max-width: 150px;
 }
-.header nav > ul {
+
+.navList {
   display: flex;
   align-items: center;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   list-style-type: none;
 }
-.header nav > ul a {
+
+.navText {
   color: #242424;
   text-decoration: none;
 }
-.header nav > ul a:visited {
+.navText:visited {
   color: #242424;
 }
-.header nav > ul a:hover {
+.navText:hover {
   color: #c70039;
   text-decoration: underline;
 }
-.header nav > ul li:nth-child(n+2) a {
-  padding-left: 2vw;
-}
-.header nav > ul .accentColor {
+.navText .accentColor {
   line-height: 0;
   font-size: 2em;
 }
-.header div {
+
+.paddingLeft2vw {
+  padding-left: 2vw;
+}
+
+.contactNav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: start;
 }
-.header div .header-email {
-  max-width: 30px;
-}
-.header div img {
+
+.headerSocialImg {
   max-width: 60px;
   transition: transform 0.2s;
 }
-.header div img:hover {
+.headerSocialImg:hover {
   transform: scale(1.05);
 }
-.header div a {
+
+.contactNavLink {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
-}
-.header div a:hover {
-  color: #242424;
-}
-.header div a:nth-child(1) {
-  font-size: 0.8em;
-  line-height: 2.2;
-}
-.header div a:nth-child(1) img {
-  margin-right: 1vw;
-}
-.header div a:nth-child(2),
-.header div a:nth-child(3) {
   padding-left: 3vw;
   margin-top: -12px;
+}
+.contactNavLink:hover {
+  color: #242424;
 }
 
 /* -------------------------    HERO SECTION    ------------------------- */
@@ -121,36 +129,42 @@ h3 {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 25vh;
+  margin-top: 320px;
 }
-.heroSection .hero-img {
+
+.hero-img {
   border-radius: 50%;
   max-width: 570px;
   width: 100%;
 }
-.heroSection section {
+
+.heroContent {
   max-width: 570px;
 }
-.heroSection section h2 {
+
+.heroContentHeading {
   line-height: 1.2;
   font-weight: 400;
   -webkit-margin-after: 0;
           margin-block-end: 0;
 }
-.heroSection section h2 strong {
+.heroContentHeading strong {
   display: block;
 }
-.heroSection section h2 span {
+.heroContentHeading span {
   font-size: 2em;
   line-height: 0;
   font-weight: 400;
 }
-.heroSection section p {
+
+.heroContentText {
   font-weight: 300;
-  -webkit-margin-before: 0.5em;
-          margin-block-start: 0.5em;
-  margin-bottom: 20px;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  margin-bottom: 1.8em;
 }
-.heroSection section a {
+
+.heroContentLink {
   display: block;
   text-align: center;
   width: 98%;
@@ -164,7 +178,7 @@ h3 {
   padding-bottom: 6px;
   border: 2px solid #c70039;
 }
-.heroSection section a:hover {
+.heroContentLink:hover {
   color: #c70039;
   background-color: #f8f8ff;
 }
@@ -178,34 +192,43 @@ h3 {
   justify-content: space-around;
   align-items: center;
 }
-.aboutMe .infoWrapper {
+
+.infoWrapper {
   display: flex;
   flex-direction: column;
   max-width: 40%;
 }
-.aboutMe .infoWrapper div {
+
+.infoContent {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 70px;
 }
-.aboutMe .infoWrapper div h4 {
+
+.infoContentHeading {
   margin-left: 3vw;
   font-weight: 500;
   font-size: 1.3em;
 }
-.aboutMe .infoWrapper div h4 .accentColor {
+.infoContentHeading .accentColor {
   line-height: 0;
   font-size: 1.8em;
 }
-.aboutMe section {
+
+.aboutMeContent {
   max-width: 40%;
 }
-.aboutMe section h3 {
+
+.aboutMeHeading {
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
+}
+
+.aboutMeText {
+  padding-top: 20px;
 }
 
 /* -------------------------    EXPERIENCE    ------------------------- */
@@ -213,50 +236,50 @@ h3 {
   margin-top: 25vh;
   margin-bottom: 25vh;
 }
-.experience h3 {
+
+.experienceHeading {
   margin-bottom: 90px;
+  text-align: center;
 }
-.experience .colorLine {
-  position: relative;
-}
-.experience .colorLine svg {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-}
-.experience .worklist {
+
+.worklist {
   display: flex;
   flex-direction: column;
 }
-.experience .worklist .experienceList {
+
+.experienceList {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
   margin-bottom: 100px;
 }
-.experience .worklist .experienceList div {
+
+.experienceListHeaders {
   min-width: 500px;
-  padding-left: 6.25vw;
 }
-.experience .worklist .experienceList div h4 {
+
+.experienceListHeading {
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
   font-size: 1.2em;
 }
-.experience .worklist .experienceList div h4 span {
+
+.experienceListHeadingYears {
   font-weight: 400;
   padding-left: 20px;
 }
-.experience .worklist .experienceList div h5 {
+
+.experienceListHeadingText {
   -webkit-margin-before: 0;
           margin-block-start: 0;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
 }
-.experience .worklist .experienceList p {
+
+.experienceListText {
   max-width: 500px;
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -264,28 +287,34 @@ h3 {
 
 /* -------------------------    CONTACT    ------------------------- */
 .contactMe {
-  margin-bottom: 15vh;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
 }
-.contactMe p {
+
+.contactIntro {
   margin-bottom: 40px;
+  max-width: 45ch;
 }
-.contactMe div {
+
+.contactContent {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.contactMe div a {
+
+.contactLink {
   display: flex;
   flex-direction: row;
   align-items: center;
   color: #242424;
   text-decoration: none;
 }
-.contactMe div a:hover {
+.contactLink:hover {
   color: #c70039;
 }
-.contactMe div a img {
+
+.contactImg {
   margin-right: 30px;
   max-width: 60px;
 }
@@ -306,92 +335,188 @@ h3 {
 }
 
 /* -------------------------    FOOTER    ------------------------- */
-footer {
+.footer {
   background-color: #242424;
   min-height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-footer img {
+
+.footerImg {
   width: 100%;
   max-width: 150px;
   padding-top: 17vh;
 }
-footer p {
+
+.footerText {
   margin-top: 6vh;
   margin-bottom: 6vh;
   color: #f8f8ff;
+  padding-left: 20px;
 }
-footer p a {
+
+.footerLink {
   color: #f8f8ff;
   text-decoration: none;
-  font-size: 1.2em;
 }
-footer p a:visited {
-  color: #f8f8ff;
-}
-footer p a:hover {
+.footerLink:hover {
   color: #c70039;
+}
+
+.designedLink {
+  padding-left: 20px;
+}
+
+/* -------------------------    PORTFOLIO-PAGE    ------------------------- */
+.portfolioPage {
+  margin-top: 320px;
+  margin-bottom: 25vh;
+  margin-left: 14vw;
+  margin-right: 14vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.portfolioHeading .accentColor {
+  font-size: 65px;
+}
+
+.project {
+  margin-top: 120px;
+  padding-bottom: 170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1720px;
+}
+
+.projectHeading {
+  font-size: 40px;
+  font-weight: 800;
+}
+.projectHeading .accentColor {
+  font-size: 55px;
+}
+
+.projectText {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  max-width: 540px;
+}
+
+.projectLink {
+  display: block;
+  text-align: center;
+  width: 98%;
+  text-decoration: none;
+  background-color: #c70039;
+  color: #f8f8ff;
+  font-weight: 600;
+  font-size: 1.2em;
+  border-radius: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 2px solid #c70039;
+}
+.projectLink:hover {
+  color: #c70039;
+  background-color: #f8f8ff;
+}
+
+.projectImg {
+  max-width: 670px;
+}
+
+.froderydsImg {
+  border: 1px #242424 solid;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../assets/icon-right.png);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../assets/icon-left.png);
+}
+
+.colorLine {
+  align-self: center;
+}
+
+.continuedContent {
+  align-self: center;
+  margin-top: 90px;
+}
+
+.continuedHeading {
+  font-size: 40px;
+}
+.continuedHeading .accentColor {
+  font-size: 65px;
 }
 
 /* -------------------------    MEDIA QUERIES    ------------------------- */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1720px) {
-  header .header .contactNav a {
-    padding-left: 2vw;
-  }
-  header .header .contactNav a:nth-child(1) {
-    margin-top: -12px;
-  }
-  header .header .contactNav a img {
-    max-width: 60px;
-    margin-right: 0;
-  }
-  header .header .contactNav a span {
-    display: none;
-  }
   .contentWrap {
     margin-left: 5vw;
     margin-right: 5vw;
   }
+  .contactNavLink {
+    padding-left: 2vw;
+    margin-top: -12px;
+  }
+  .headerSocialImg {
+    max-width: 60px;
+    margin-right: 0;
+  }
   .heroSection {
     justify-content: space-between;
   }
+  .project {
+    justify-content: space-around;
+  }
 }
 @media only screen and (max-width: 1500px) {
-  .heroSection img,
-  .heroSection section {
+  .hero-img,
+  .heroContent {
     padding-left: 2vw;
     padding-right: 2vw;
   }
-  .heroSection div {
-    display: none;
-  }
-  .experience .worklist .experienceList div {
-    margin-right: 5vw;
-  }
-  .experience .worklist .experienceList p {
-    margin-left: 5vw;
-  }
-  .contactMe div a {
+  .contactLink {
     font-size: 0.8em;
   }
-  .contactMe div a img {
+  .contactImg {
     margin-right: 20px;
+  }
+  .projectContent,
+  .projectImg {
+    width: 40%;
   }
 }
 @media only screen and (max-width: 1200px) {
-  header .header {
+  .navText {
     font-size: 0.9em;
   }
-  header .header .contactNav a img {
+  .headerSocialImg {
     max-width: 50px;
   }
   .heroSection {
     flex-direction: column;
   }
-  .heroSection section {
+  .heroContent {
     margin-top: 50px;
     max-width: 600px;
   }
@@ -399,80 +524,74 @@ footer p a:hover {
     flex-direction: column;
     align-items: center;
   }
-  .aboutMe .infoWrapper,
-  .aboutMe section {
+  .infoWrapper,
+  .aboutMeContent {
     max-width: 600px;
     width: 100%;
   }
-  .aboutMe .infoWrapper {
+  .infoWrapper {
     order: 2;
     margin-top: 10vh;
   }
-  .aboutMe section {
+  .aboutMeContent {
     order: 1;
   }
-  .experience .worklist .experienceList div,
-  .experience .worklist .experienceList p {
+  .experienceListHeaders,
+  .experienceListText {
     width: 40%;
     min-width: 0;
     padding: 0;
     margin: 0;
   }
-  .experience .worklist .experienceList p {
-    padding-left: 10vw;
-  }
-  .experience .worklist .experienceList div {
-    padding-left: 5vw;
-  }
-  .experience .worklist .experienceList div h4 span {
+  .experienceListHeadingYears {
     padding-left: 0;
     display: block;
   }
-  .contactMe div a {
+  .contactLink {
     font-size: 0.65em;
   }
-  .contactMe div a img {
+  .contactImg {
     margin-right: 10px;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
   header {
     background-color: #f8f8ff !important;
   }
-  header nav a {
-    color: #242424 !important;
-  }
-  header nav ul li:nth-child(n+2) a {
+  .paddingLeft2vw {
     padding-left: 2vw !important;
   }
-  header .headerLogo {
-    content: url("assets/logo.png");
-  }
-  header #mobileMenuOpen,
-  header #mobileMenuClose {
-    display: none !important;
-  }
-  header .header #mainNav,
-  header .header #contactNav {
+  #mainNav,
+  #contactNav {
     display: flex !important;
   }
-  header .header nav ul {
+  .navList {
     flex-direction: row;
   }
-  header .header .contactNav {
+  .navText {
+    color: #242424 !important;
+  }
+  .headerLogo {
+    content: url("../assets/logo.png");
+  }
+  #mobileMenuOpen,
+  #mobileMenuClose {
+    display: none !important;
+  }
+  .contactNav {
     flex-direction: row;
   }
-  header .header .contactNav a {
+  .contactNavLink {
     margin-top: -12px;
   }
-  header .header .contactNav .header-email {
-    content: url("assets/email.png");
+  .header-email {
+    content: url("../assets/email.png");
   }
-  header .header .contactNav .header-instagram {
-    content: url("assets/instagram.png");
+  .header-instagram {
+    content: url("../assets/instagram.png");
   }
-  header .header .contactNav .header-linkedin {
-    content: url("assets/linkedin.png");
+  .header-linkedin {
+    content: url("../assets/linkedin.png");
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -486,78 +605,112 @@ footer p a:hover {
     justify-content: space-between;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 5vw;
-    padding-right: 5vw;
     margin-bottom: 80px !important;
   }
-  header #mobileMenuOpen {
+  #mobileMenuOpen {
     display: block;
   }
-  header .header {
+  .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
   }
-  header .header #mainNav,
-  header .header #contactNav {
+  #mainNav,
+  #contactNav {
     display: none;
   }
-  header .header nav {
+  .mainNav {
     margin-left: 20px;
   }
-  header .header nav ul {
+  .navList {
     flex-direction: column;
     align-items: flex-start;
   }
-  header .header nav ul li {
+  .navList li {
     padding-bottom: 10px;
   }
-  header .header .contactNav {
+  .contactNav {
     flex-direction: column;
+    margin-right: 60px;
   }
-  header .header .contactNav a {
+  .contactNavLink {
     margin: 0;
     margin-bottom: 20px;
   }
-  header .header .contactNav a img {
+  .headerSocialImg {
     max-width: 40px;
   }
-  .contactMe div {
+  .contactContent {
     justify-content: space-evenly;
   }
-  .contactMe div a img {
+  .contactImg {
     margin-right: 0px;
     transition: transform 0.2s;
   }
-  .contactMe div a span {
+  .contactImg:hover {
+    transform: scale(1.05);
+  }
+  .contactLinkText {
     display: none;
   }
-  .contactMe div a:hover {
-    transform: scale(1.05);
+  .headingWrapper {
+    margin-left: 11vw;
+  }
+  .project {
+    flex-direction: column;
+  }
+  .projectContent,
+  .projectImg {
+    width: 75%;
+  }
+  .projectImg {
+    order: 1 !important;
+  }
+  .projectContent {
+    order: 2 !important;
+  }
+  .projectHeading {
+    margin-top: 30px;
+  }
+  .projectText {
+    max-width: 670px;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  .experience .colorLine svg {
-    left: 2%;
-  }
-  .experience .worklist .experienceList {
+  .experienceList {
     flex-direction: column;
     padding: 0;
     margin: 0;
     align-items: center;
-    margin-left: 10vw;
     justify-content: space-between;
     margin-bottom: 100px;
   }
-  .experience .worklist .experienceList div,
-  .experience .worklist .experienceList p {
-    width: 85%;
+  .experienceListHeaders,
+  .experienceListText {
+    width: 90%;
     margin: 0;
     padding: 0;
   }
-  .experience .worklist .experienceList p {
+  .experienceListText {
     margin-top: 30px;
+    max-width: 800px;
+  }
+  .experienceHeading {
+    text-align: start;
+    margin-left: 5%;
+  }
+  .footerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+  .designedLink {
+    padding-left: 0;
+    padding-top: 15px;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -566,74 +719,84 @@ footer p a:hover {
     align-items: flex-start;
     padding-top: 50px;
   }
-  header .header {
+  .header {
     flex-direction: column;
     padding-top: 0;
+    align-items: flex-start;
   }
-  header .header .headerLogo {
+  .headerLogo {
     max-width: 100px;
   }
-  header .header .menu-open,
-  header .header .menu-close {
+  .menu-open,
+  .menu-close {
     max-width: 70px;
-    margin-top: 80px;
   }
-  header .header #mainNav,
-  header .header #contactNav {
-    align-self: center;
-    margin-left: 11vw;
+  #mainNav,
+  #contactNav {
+    margin-left: 0;
   }
-  header .header #mainNav {
+  .contactNavLink {
+    margin: 0 10px;
+  }
+  .headerEmailLink {
+    margin: 0;
+    padding-left: 0;
+    margin-right: 10px;
+  }
+  #mainNav {
     margin-bottom: 40px;
     margin-top: 40px;
   }
-  header .header #contactNav {
+  #contactNav {
     flex-direction: row;
+    margin-right: 0;
   }
-  header .header #contactNav a {
-    margin: 0 10px !important;
-  }
-  header .header #contactNav a img {
+  .headerSocialImg {
     max-width: 50px;
   }
-  footer {
+  .footer {
     min-height: 300px;
   }
-  footer img {
+  .footerImg {
     max-width: 100px;
     padding-top: 10vh;
   }
-  footer p {
+  .footerText {
     font-size: 0.7em;
   }
-  footer p a {
+  .footerLink {
     font-size: 1.1em;
+  }
+  .portfolioPage,
+  .heroSection {
+    margin-top: 200px;
+  }
+  .headingWrapper {
+    margin-left: 6vw;
+  }
+  .portfolioHeading,
+  .projectHeading,
+  .continuedHeading {
+    font-size: 35px;
+  }
+  .projectContent,
+  .projectImg {
+    width: 85%;
   }
 }
 @media only screen and (max-width: 500px) {
-  .heroSection section h2 strong {
+  .heroContentHeading strong {
     display: inline;
   }
-  .aboutMe .infoWrapper {
+  .infoWrapper {
     align-self: center;
+  }
+  .footerText {
+    font-size: 0.6em;
   }
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {
-  header .header {
-    flex-grow: 0 !important;
-  }
-  header .header #mainNav {
-    align-self: flex-start;
-    margin-left: 5vw;
-  }
-  header .header #contactNav {
-    flex-direction: column;
-    margin-left: 0;
-  }
-  header .header #contactNav a {
-    padding-bottom: 20px;
-  }
   h3 {
     font-size: 1.4em;
   }
@@ -644,77 +807,130 @@ footer p a:hover {
     margin-left: 10vw;
     margin-right: 10vw;
   }
-  .heroSection section a {
+  .header {
+    flex-grow: 0 !important;
+  }
+  #mainNav {
+    margin-left: 5vw;
+  }
+  #contactNav {
+    margin-left: 5vw;
+  }
+  .contactNavLink {
+    padding-bottom: 20px;
+  }
+  .heroContentLink {
     font-size: 1em;
   }
-  .aboutMe .infoWrapper div img {
+  .infoContentImg {
     max-width: 75px;
   }
-  .aboutMe .infoWrapper div h4 {
+  .infoContentHeading {
     font-size: 1em;
     margin-left: 5vw;
   }
-  .experience .colorLine {
-    display: none;
+  .experienceHeading {
+    margin-left: 0;
   }
-  .experience .worklist .experienceList {
+  .experienceList {
     margin-left: 0;
     justify-content: center;
   }
-  .experience .worklist .experienceList div,
-  .experience .worklist .experienceList p {
+  .experienceListHeaders,
+  .experienceListText {
     width: 100%;
   }
-  .experience .worklist .experienceList div h4 {
+  .experienceListHeading {
     font-size: 1.1em;
   }
-  .experience .worklist .experienceList div h4 span {
+  .experienceListHeadingYears {
     font-size: 0.9em;
   }
-  .experience .worklist .experienceList div h5 {
+  .experienceListHeadingText {
     font-size: 0.9em;
   }
-  .contactMe div {
+  .contactContent {
     justify-content: space-between;
   }
-  .contactMe div a img {
+  .contactImg {
     max-width: 50px;
   }
+  .headingWrapper {
+    margin-left: 0;
+  }
+  .portfolioHeading,
+  .projectHeading,
+  .continuedHeading,
+  .projectLink {
+    font-size: 25px;
+  }
+  .projectContent,
+  .projectImg {
+    width: 100%;
+  }
 }
-@media only screen and (max-width: 300px) {
-  .aboutMe .infoWrapper div {
+@media only screen and (max-width: 350px) {
+  .headerEmailLink {
+    margin-left: 5vw;
+  }
+  #contactNav {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .contactNavLink {
+    padding-left: 0;
+    margin-left: 5vw;
+  }
+  .infoContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .aboutMe .infoWrapper div img {
+  .infoContentImg {
     max-width: 100%;
   }
-  .aboutMe .infoWrapper div h4 {
+  .infoContentHeading {
     font-size: 1.2em;
     margin-left: 0;
     text-align: center;
     margin-top: 20px;
   }
-  .contactMe div {
+}
+@media only screen and (max-width: 300px) {
+  .headerEmailLink {
+    margin-left: 5vw;
+  }
+  #contactNav {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .contactNavLink {
+    padding-left: 0;
+    margin-left: 5vw;
+  }
+  .contactContent {
     flex-direction: column;
     align-items: center;
   }
-  .contactMe div a {
+  .contactLink {
     margin-top: 30px;
   }
-  footer p {
+  .footerText {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 6vh;
   }
-  footer p span {
+  .footerText span {
     display: block;
   }
-  footer p a {
+  .footerLink {
     font-size: 1em;
+  }
+  .continuedHeading {
+    line-height: 0.4;
+    padding-bottom: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
