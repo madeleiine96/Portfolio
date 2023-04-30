@@ -805,6 +805,10 @@ header {
             padding-left: 0;
             padding-top: 15px;
       }
+
+      .hero-img {
+            content: url("../assets/profileMobile.png");
+      }
 }
 
 @media only screen and (max-width: 600px) {
