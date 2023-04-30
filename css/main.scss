@@ -457,9 +457,50 @@ header {
       }
 }
 
-/* -------------------------    MEDIA QUERIES    ------------------------- */
+/* -------------------------    ERROR-PAGES    ------------------------- */
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+.errorPage {
+      margin-top: 400px;
+      margin-bottom: 25vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.errorWrapper {
+      max-width: 500px;
+}
+
+.errorHeading {
+      font-size: 36px;
+      font-weight: 800;
+}
+
+.errorText {
+      padding-top: 20px;
+      padding-bottom: 30px;
+}
+
+.errorButton {
+      display: block;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      background-color: $accent;
+      color: $white;
+      font-weight: 600;
+      font-size: 1.2em;
+      border-radius: 40px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border: 2px solid $accent;
+
+      &:hover {
+            color: $accent;
+            background-color: $white;
+      }
+}
+
+/* -------------------------    MEDIA QUERIES    ------------------------- */
 
 @media only screen and (max-width: 1720px) {
       .contentWrap {
@@ -616,7 +657,21 @@ header {
 }
 @media only screen and (max-width: 1000px) {
       body {
-            font-size: 1.6em;
+            font-size: 1.3em;
+      }
+
+      // making margins between elements smaller
+
+      .heroSection,
+      .portfolioPage {
+            margin-bottom: 17vh;
+      }
+
+      .aboutMe,
+      .experience,
+      .contactMe {
+            margin-top: 17vh;
+            margin-bottom: 17vh;
       }
 
       // Header
@@ -715,7 +770,6 @@ header {
       }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
       .experienceList {
             flex-direction: column;
@@ -753,7 +807,6 @@ header {
       }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
       // Header
       header {
@@ -838,6 +891,20 @@ header {
 }
 
 @media only screen and (max-width: 500px) {
+      // making margins between elements smaller
+
+      .heroSection,
+      .portfolioPage {
+            margin-bottom: 14vh;
+      }
+
+      .aboutMe,
+      .experience,
+      .contactMe {
+            margin-top: 14vh;
+            margin-bottom: 14vh;
+      }
+
       .heroContentHeading {
             strong {
                   display: inline;
@@ -853,7 +920,6 @@ header {
       }
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {
       h3 {
             font-size: 1.4em;

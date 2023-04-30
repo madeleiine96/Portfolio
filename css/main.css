@@ -472,8 +472,49 @@ header {
   font-size: 65px;
 }
 
+/* -------------------------    ERROR-PAGES    ------------------------- */
+.errorPage {
+  margin-top: 400px;
+  margin-bottom: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorWrapper {
+  max-width: 500px;
+}
+
+.errorHeading {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.errorText {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.errorButton {
+  display: block;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  background-color: #c70039;
+  color: #f8f8ff;
+  font-weight: 600;
+  font-size: 1.2em;
+  border-radius: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 2px solid #c70039;
+}
+.errorButton:hover {
+  color: #c70039;
+  background-color: #f8f8ff;
+}
+
 /* -------------------------    MEDIA QUERIES    ------------------------- */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1720px) {
   .contentWrap {
     margin-left: 5vw;
@@ -601,7 +642,17 @@ header {
 }
 @media only screen and (max-width: 1000px) {
   body {
-    font-size: 1.6em;
+    font-size: 1.3em;
+  }
+  .heroSection,
+  .portfolioPage {
+    margin-bottom: 17vh;
+  }
+  .aboutMe,
+  .experience,
+  .contactMe {
+    margin-top: 17vh;
+    margin-bottom: 17vh;
   }
   header {
     display: flex;
@@ -683,7 +734,6 @@ header {
     max-width: 670px;
   }
 }
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   .experienceList {
     flex-direction: column;
@@ -718,7 +768,6 @@ header {
     padding-top: 15px;
   }
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   header {
     align-items: flex-start;
@@ -790,6 +839,16 @@ header {
   }
 }
 @media only screen and (max-width: 500px) {
+  .heroSection,
+  .portfolioPage {
+    margin-bottom: 14vh;
+  }
+  .aboutMe,
+  .experience,
+  .contactMe {
+    margin-top: 14vh;
+    margin-bottom: 14vh;
+  }
   .heroContentHeading strong {
     display: inline;
   }
@@ -800,7 +859,6 @@ header {
     font-size: 0.6em;
   }
 }
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {
   h3 {
     font-size: 1.4em;

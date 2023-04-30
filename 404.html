@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="author" content="Madeleine Gustavsson" />
+
+            <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+
+            <title>404 - Not Found</title>
+            <meta name="robots" content="noindex, nofollow" />
+
+            <!--  StyleSheets   -->
+            <link rel="stylesheet" href="css/reset.css" />
+            <link rel="stylesheet" href="css/main.css" />
+      </head>
+      <body>
+            <!--        HEADER START      -->
+            <header>
+                  <div class="header">
+                        <h1>Madeleine Gustavsson - Web developer</h1>
+                        <a href="https://madeleineportfolio.com"
+                              ><img
+                                    src="assets/logo.png"
+                                    alt="Logo with the name Madeleine."
+                                    class="headerLogo"
+                        /></a>
+
+                        <!--  NAVIGATION  -->
+                        <nav id="mainNav" class="mainNav">
+                              <ul class="navList">
+                                    <li>
+                                          <a
+                                                href="portfolio.html"
+                                                class="navText"
+                                                onclick="closeMenuLink();"
+                                                title="See Madeleine's projects"
+                                                >Portfolio<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                                    <li>
+                                          <a
+                                                href="index.html#aboutMeLink"
+                                                class="navText paddingLeft2vw"
+                                                onclick="closeMenuLink();"
+                                                title="Read more about Madeleine"
+                                                >About me<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                                    <li>
+                                          <a
+                                                href="index.html#contactMeLink"
+                                                class="navText paddingLeft2vw"
+                                                onclick="closeMenuLink();"
+                                                title="Contact me. "
+                                                >Contact me<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                                    <li>
+                                          <a
+                                                href="index.html#experienceLink"
+                                                class="navText paddingLeft2vw"
+                                                onclick="closeMenuLink();"
+                                                title="Read about Madeleine's experience"
+                                                >Experience<span class="accentColor">.</span></a
+                                          >
+                                    </li>
+                              </ul>
+                        </nav>
+
+                        <!--  CONTACT SECTION IN HEADER     -->
+                        <div class="contactNav" id="contactNav">
+                              <a
+                                    href="mailto:madeleiine96@gmail.com"
+                                    class="accentColor contactNavLink headerEmailLink"
+                                    ><img
+                                          src="assets/email.png"
+                                          alt="Icon for e-mail - envelope"
+                                          class="header-email headerSocialImg"
+                                    />
+                              </a>
+
+                              <a
+                                    href="https://www.instagram.com/madeleiine96/"
+                                    title="Find me on Instagram"
+                                    class="contactNavLink"
+                                    ><img
+                                          src="assets/instagram.png"
+                                          alt="Logotype for Instagram - retro camera"
+                                          class="header-instagram headerSocialImg"
+                              /></a>
+                              <a
+                                    href="https://www.linkedin.com/in/madeleineportfolio/"
+                                    title="Find me on LinkedIn"
+                                    class="contactNavLink"
+                                    ><img
+                                          src="assets/linkedin.png"
+                                          alt="Logotype for LinkedIn - text 'in'."
+                                          class="header-linkedin headerSocialImg"
+                              /></a>
+                        </div>
+                  </div>
+                  <span
+                        class="icon menu-close pointer"
+                        id="mobileMenuClose"
+                        onclick="closeMobileMenu()"
+                        ><img src="assets/menu-close.png" alt="Hamburgermenu icon"
+                  /></span>
+                  <span
+                        class="icon menu-open pointer"
+                        id="mobileMenuOpen"
+                        onclick="openMobileMenu()"
+                        ><img src="assets/menu-open.png" alt="Hamburgermenu icon"
+                  /></span>
+            </header>
+            <!--        HEADER END      -->
+
+            <!--        MAIN START      -->
+            <main class="errorPage contentWrap">
+                  <section class="errorWrapper">
+                        <h2 class="errorHeading">
+                              This page does <span class="accentColor">not </span>exist<span
+                                    class="accentColor"
+                                    >.</span
+                              >
+                        </h2>
+                        <p class="errorText">
+                              Unfortunately this page does not exist. Below is a link to the
+                              homepage, please use it.
+                        </p>
+                        <a
+                              href="https://madeleineportfolio.com"
+                              title="Homepage"
+                              role="button"
+                              class="errorButton"
+                              >Home</a
+                        >
+                  </section>
+            </main>
+            <!--        MAIN END      -->
+
+            <!--        FOOTER START      -->
+            <footer class="footer">
+                  <a href="https://madeleineportfolio.com" title="Homepage"
+                        ><img
+                              src="assets/logoTransparent.png"
+                              alt="Logo of the name Madeleine"
+                              class="footerImg"
+                              loading="lazy"
+                  /></a>
+
+                  <p class="footerText">
+                        <span
+                              >&copy; 2023
+                              <a
+                                    href="https://madeleineportfolio.com"
+                                    class="footerLink"
+                                    title="Homepage"
+                                    >madeleineportfolio.com</a
+                              ></span
+                        >
+                        <a
+                              href="https://danielhellstrom.me/"
+                              class="footerLink designedLink"
+                              title="To Daniel's portfolio"
+                              >Designed by Daniel.</a
+                        >
+                  </p>
+            </footer>
+            <!--        FOOTER END          -->
+
+            <!--        SCRIPTS          -->
+
+            <script src="js/main.js"></script>
+      </body>
+</html>
